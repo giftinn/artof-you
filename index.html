@@ -240,9 +240,9 @@ pointer-events:none;
 
 <!-- welcome -->
 <section class="card active">
-<h1>I belong to You</h1>
-<p>Special present For someone i love the most.</p>
-<button onclick="next()">Unlock</button>
+<h1>Hey, How's your day?</h1>
+<p>Special present for someone i love the most.</p>
+<button onclick="next()">continue</button>
 </section>
 
 <!-- pin -->
@@ -273,7 +273,7 @@ pointer-events:none;
 <div id="options"></div>
 
 <div class="score-box">
-Points: <span id="score">0</span> / 3
+Points: <span id="score">0</span> / 4
 </div>
 
 <p id="feedback"></p>
@@ -282,7 +282,7 @@ Points: <span id="score">0</span> / 3
 <!-- final -->
 <section class="card">
 
-<h1>Between Us in Paris</h1>
+<h1>Congratulations, you've become important enough to receive another letter.</h1>
 
 <div class="lovebox">
 <div class="timer-title">TIME WITH YOU</div>
@@ -336,7 +336,7 @@ if(page===2)loadQuestion();
 ================================================= */
 
 let pinInput = '';
-const correctPin = '2505';
+const correctPin = '3007';
 const pinDisplay = document.getElementById("pin");
 
 function renderDots(){
@@ -384,9 +384,10 @@ function checkPin(){
 ================================================= */
 
 const questions=[
-{q:"When did our story begin?", options:["January","May","March"],correct:1},
-{q:"Who loves the most?", options:["You","100% me","Both"],correct:2},
-{q:"What’s on my mind most of the time?", options:["Game","Someone else","You"],correct:2}
+{q:"Kapan pertama kali kita ketemu? ", options:["Juli","Oktober","Desember"],correct:0},
+{q:"Apa yang gua lakukan pas kangen lo? ", options:["Tidur","chat duluan","pura-pura biasa aja"],correct:2},
+{q:"Siapa yang egonya paling tinggi?", options:["Ahdan","Dinara","Dua-duanya"],correct:2},
+{q:"Siapa cwo gua?", options:["Kevin Alviano","Jean Kristein","Ahdan Reihan"],correct:1}
 ];
 
 let currentQ = 0;
@@ -451,7 +452,7 @@ function checkAnswer(i,btn){
 
 function startTimer(){
 
-    const start = new Date("2025-05-25T00:00:00");
+    const start = new Date("2024-07-25T00:00:00");
 
     setInterval(()=>{
 
@@ -486,8 +487,44 @@ function revealMemory(el){
     `;
 
     const text = `
-        I love you because you actually put effort into loving me. I love you because nobody has ever given me the love that you have given me and you are the only one that could ever love me this way. I love you because you always make me feel like I am worth something. I love you because you have a nurturing nature and you take care of me, especially on days that I need love the most. I love you because you make me smile when I have almost forgotten how to. I love you because you have a huge and honest heart. I love you and every little detail about you. I love you because you are simply you.
-    `;
+Hey, Ahdan.
+Sebenarnya gua ngga ada rencana buat tulis ini. Tapi ya, ada banyak hal yang juga ngga pernah gua rencanain sampai lo hadir dalam hidup gua. 
+Akhir-akhir ini gua mikirin lo lebih sering daripada yang pengen gua akuin. Sial. Dari semua orang yang pernah gua temui, lo salah satu dari sedikit orang yang bikin gua kewalahan sampai sejauh ini.
+
+Sejujurnya, gua ngga tahu apa yang akhir-akhir ini lo pikirin. Gua ngga tahu apa yang selama ini lo tanggung sendirian, dan gua juga ngga tahu bagian apa yang gua lakuin tanpa sadar sampai ngebuat lo begitu.
+
+Kalau begitu, tolong maafin gua ya?
+
+Serius.
+
+Gua mungkin terlalu banyak waktu sampai bertanya-tanya di mana letak kesalahan gua. Sialan banget, jujur. Otak gua ngga bisa cari tau jawabannya. 
+
+But more than anything, I hope you're doing alright.
+
+I hope you're eating properly.
+
+I hope you're sleeping enough.
+
+I hope whatever has been weighing on your heart becomes a little lighter soon.
+
+And I hope you know that you can always tell me about it.
+
+Really.
+
+Karena entah sejak kapan, lo udah jadi seseorang yang penting buat gua. Jauh lebih penting daripada yang lo bayangin. Lo jadi orang pertama yang gua cari buat jadi tempat cerita gua. 
+
+Maybe that's why losing you scares me so much. So please believe me when I say this: I'm here.
+Tell me about your day.
+Tell me about the places you go.
+Tell me about the things that make you happy and the things that make you want to scream into a pillow.
+I'll listen.
+I always will.
+And if life eventually takes us down different paths, I hope we never become strangers. I'd hate that more than I can explain.
+
+And one last thing.
+
+Doa terbaik selalu gua panjatkan buat lo. Dan gua rasa seterusnya bakal begitu.
+`;
 
     const paragraphs = text.trim().split(/\n\s*\n/);
 
@@ -502,7 +539,7 @@ function revealMemory(el){
     function typeParagraph(){
 
         if(p>=paragraphs.length){
-            sign.innerHTML="Sincerely<br> Me";
+            sign.innerHTML="From your favorite headache,<br> Dinara.";
             return;
         }
 
